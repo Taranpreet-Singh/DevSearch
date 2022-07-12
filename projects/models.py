@@ -1,5 +1,3 @@
-from email.policy import default
-from tkinter import CASCADE, FLAT
 from django.db import models
 import uuid
 from users.models import Profile
