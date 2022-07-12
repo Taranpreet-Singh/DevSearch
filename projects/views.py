@@ -1,7 +1,4 @@
 from email import message
-from turtle import right
-from unicodedata import name
-from unittest import result
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
