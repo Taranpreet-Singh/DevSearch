@@ -130,13 +130,15 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Also we need psycopg2 as a driver to connect to the postgre database, jst pip install it
+# Also we added the USER, PASS, HOST to local environment, jst go to envirnment variables in start
+# and to access those env variables os.environ.get('VAR_NAME')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'devsearch',  # name of the postgre databse we created in pg admin
-        'USER': 'taranpreetsingh',   # default, but we can change in database properties
-        'PASSWORD': 'Maddy123',
-        'HOST': 'database-2.cjvtk6wlpf5j.us-east-2.rds.amazonaws.com',
+        'USER': os.environ.get('DB_USER'),   # default, but we can change in database properties
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': '5432'
     }
 }
@@ -228,8 +230,8 @@ AWS_QUERYSTRING_AUTH = False
 AWS_S3_FILE_OVERWRITE = False
 
 # Connecting to IAM service 
-AWS_ACCESS_KEY_ID = 'AKIARA3MH2SWWYJQKJUU'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 # which bucket we trying to use
 AWS_STORAGE_BUCKET_NAME = 'devsearchlive-bucket'
 
