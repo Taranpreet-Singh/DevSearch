@@ -101,7 +101,7 @@ SIMPLE_JWT = {
 
 
 
-ROOT_URLCONF = 'DevSearchLive.urls'
+ROOT_URLCONF = 'devsearchlive.urls'
 
 TEMPLATES = [
     {
@@ -119,7 +119,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'DevSearchLive.wsgi.application'
+WSGI_APPLICATION = 'devsearchlive.wsgi.application'
 
 # For giving access to diffrent server that is using our API
 CORS_ALLOW_ALL_ORIGINS = True
