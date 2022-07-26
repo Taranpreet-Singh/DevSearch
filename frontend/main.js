@@ -17,9 +17,7 @@ let buildProjects = (projects) => {
 
     let projectCard = `
                 <div class="project--card">
-                    <img src="http://127.0.0.1:8000${
-                      project.featured_image.url
-                    }" />
+                    <img src="http://127.0.0.1:8000${project.featured_image}" />
                     
                     <div>
                         <div class="card--header">
